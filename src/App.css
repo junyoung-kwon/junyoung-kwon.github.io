@@ -1,38 +1,107 @@
 .App {
   text-align: center;
+  background-color: #f5f0e1; /* Soft beige */
+  min-height: 100vh;
+  color: #3e3e3e;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navigation bar */
+.App-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #d9cfc1; /* Light taupe */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-nav li {
+  margin: 0 15px;
+  padding: 15px 25px;
+  cursor: pointer;
+  color: #3e3e3e;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App-nav li:hover {
+  background-color: #a26769; /* Rosewood accent */
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+main {
+  padding: 40px 20px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #f5f0e1;
+  min-height: 70vh;
+  padding: 2rem;
+  color: #3e3e3e;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.project-card {
+  background: #fdf6ee; /* Soft beige background */
+  color: #3e3e3e;       /* Muted dark text */
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  color: #a26769; /* Warm brown accent */
+}
+
+.project-card p {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.project-link {
+  align-self: flex-start;
+  color: #b25a58;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.project-link:hover {
+  border-color: #b25a58;
+}
+
+.content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;         /* Center the content horizontally */
+  padding: 2rem 1.5rem;   /* Add spacing on sides and top/bottom */
+  text-align: left;
 }
