@@ -6,6 +6,6 @@ A personal website built with React to showcase my projects, skills, and contact
 
 ## Demo
 
-[Live Site](https://junyoung-kwon.github.io/personal_website/)
+[Live Site](https://junyoung-kwon.github.io)
 
 ---
