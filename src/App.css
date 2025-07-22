@@ -103,7 +103,7 @@ main {
   max-width: 1000px;
   margin: 0 auto;         /* Center the content horizontally */
   padding: 2rem 1.5rem;   /* Add spacing on sides and top/bottom */
-  text-align: left;
+  box-sizing: border-box;
 }
 
 .content-container {
